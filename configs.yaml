@@ -1,0 +1,32 @@
+# Default configuration for EngHealthCLIP
+
+model:
+  name: "EngHealthCLIP"
+  input_size: 128
+  hidden_layers: [256, 128, 64]
+  output_size: 3
+  dropout_rate: 0.5
+
+training:
+  batch_size: 32
+  learning_rate: 0.001
+  epochs: 50
+  optimizer: "adam"
+  loss_function: "cross_entropy"
+  scheduler: "StepLR"
+  step_size: 10
+  gamma: 0.5
+
+data:
+  data_path: "data/dataset.csv"
+  test_split: 0.2
+  shuffle: True
+  random_seed: 42
+
+evaluation:
+  metrics: ["accuracy", "f1_score", "precision", "recall"]
+
+logging:
+  save_model: True
+  save_dir: "checkpoints/"
+  log_interval: 10
