@@ -50,60 +50,73 @@ EngHealthCLIP/
 
 ---
 
-## **Getting Started**
 
-### **1. Prerequisites**
-- Python >= 3.8
-- CUDA-enabled GPU (optional but recommended)
 
-### **2. Installation**
-Clone the repository:
-```bash
-git clone https://github.com/yourusername/EngHealthCLIP.git
-cd EngHealthCLIP
-pip install -r requirements.txt
-python src/train.py --config configs/train_config.yaml
-python src/evaluate.py --config configs/eval_config.yaml --checkpoint path/to/checkpoint.pth
-3. Dataset Format
-The dataset should be in the following format:
+### Datasets
+The following datasets are used to train and evaluate the framework:
+- **SST Dataset**: Stanford Sentiment Treebank, used for sentiment analysis tasks.
+- **ReDial Dataset**: A dataset of recommendation dialogs, used for multi-domain conversational tasks.
+- **Multi-Domain Sentiment Dataset**: A dataset capturing sentiment across various domains.
+- **Yelp Dataset**: Yelp reviews dataset for sentiment analysis and domain-specific health insights.
 
-EEG data: Tensor with shape [batch_size, eeg_input_dim]
-Text data: Tokenized text input using the CLIP tokenizer
-Image data: Preprocessed image tensors compatible with CLIP
-Labels: Task-specific labels (classification or regression)
-data:
-  train_path: "data/train_data.pt"
-  batch_size: 32
+## Installation
 
-model:
-  eeg_dim: 128
-  hidden_dim: 256
-  output_dim_task1: 5
-  output_dim_task2: 1
+To get started with EngHealthCLIP:
 
-training:
-  lr: 0.001
-  epochs: 20
-Results
-Performance
-Stress Detection (Task 1):
-Accuracy: 92.5%
-F1-Score: 91.8%
-Fatigue Score Prediction (Task 2):
-Mean Absolute Error (MAE): 0.15
-Visualization
-Attention-based modality fusion provides interpretability by highlighting the importance of EEG, text, and image data in predictions.
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/your-username/EngHealthCLIP.git
+    cd EngHealthCLIP
+    ```
 
-Contributing
-We welcome contributions! Please follow these steps:
+2. Install the required dependencies:
+    ```bash
+    pip install -r Requirements
+    ```
 
-Fork the repository.
-Create a new branch for your feature/bug fix.
-Submit a pull request with a clear description.
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
+3. Update the configurations in `configs.yaml` as per your requirements.
 
-Future Work
-Expand support for more modalities (e.g., audio, video).
-Incorporate more advanced EEG processing techniques.
-Develop real-time health monitoring capabilities.
+4. Run the project:
+    ```bash
+    python Scripts/train.py
+    ```
+
+## Applications
+
+EngHealthCLIP is designed to support a variety of use cases in public health, including:
+- Stress monitoring and management.
+- Fatigue detection for workplace health.
+- Scalable global health interventions.
+
+## Contributing
+
+We welcome contributions to enhance EngHealthCLIP. To contribute:
+1. Fork this repository.
+2. Create a new branch for your feature:
+    ```bash
+    git checkout -b feature-name
+    ```
+3. Commit your changes and open a pull request.
+
+
+## Future Work
+
+EngHealthCLIP opens up exciting avenues for future exploration:
+1. **Broader Multilingual Support**: Extend the framework to support other widely spoken languages, enabling greater inclusivity for non-English-speaking populations.
+2. **Real-Time Applications**: Optimize the model for real-time EEG data analysis in wearable devices for continuous health monitoring.
+3. **Expanded Health Indicators**: Incorporate additional biomarkers and health indicators, such as emotional well-being, sleep quality, and cognitive load.
+4. **Cross-Domain Adaptation**: Develop transfer learning methods to adapt the framework across different domains and populations with minimal fine-tuning.
+5. **Ethics and Bias Mitigation**: Investigate and address potential biases in model predictions and ensure ethical application across diverse cultural contexts.
+
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+This project was inspired by the growing intersection of English education, artificial intelligence, and multicultural health challenges. Special thanks to the contributors and communities fostering advancements in these fields.
+
+---
+
+For questions or collaborations, please contact [your-email@example.com](mailto:your-email@example.com).
