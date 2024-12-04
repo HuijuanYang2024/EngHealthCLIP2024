@@ -1,0 +1,17 @@
+# Basic requirements
+numpy==1.23.5
+pandas==1.5.3
+scikit-learn==1.2.0
+matplotlib==3.7.0
+
+# Deep learning and NLP
+torch==1.13.1
+torchvision==0.14.1
+transformers==4.26.0
+\# EEG data processing
+eeglib==0.0.5
+mne==1.2.2
+
+# Utility packages
+tqdm==4.64.1
+requests==2.28.2
