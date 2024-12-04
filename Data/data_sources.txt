@@ -1,0 +1,37 @@
+
+
+
+@inproceedings{data1,
+	title={Recursive deep models for semantic compositionality over a sentiment treebank},
+	author={Socher, Richard and Perelygin, Alex and Wu, Jean and Chuang, Jason and Manning, Christopher D and Ng, Andrew Y and Potts, Christopher},
+	booktitle={Proceedings of the 2013 conference on empirical methods in natural language processing},
+	pages={1631--1642},
+	year={2013}
+}  
+
+
+@article{data2,
+	title={Towards deep conversational recommendations},
+	author={Li, Raymond and Ebrahimi Kahou, Samira and Schulz, Hannes and Michalski, Vincent and Charlin, Laurent and Pal, Chris},
+	journal={Advances in neural information processing systems},
+	volume={31},
+	year={2018}
+}
+
+@inproceedings{data3,
+	title={Biographies, bollywood, boom-boxes and blenders: Domain adaptation for sentiment classification},
+	author={Blitzer, John and Dredze, Mark and Pereira, Fernando},
+	booktitle={Proceedings of the 45th annual meeting of the association of computational linguistics},
+	pages={440--447},
+	year={2007}
+}
+
+
+@inproceedings{data4,
+	title={Restaurant setup business analysis using yelp dataset},
+	author={Hegde, Sindhu and Satyappanavar, Supriya and Setty, Shankar},
+	booktitle={2017 International Conference on Advances in Computing, Communications and Informatics (ICACCI)},
+	pages={2342--2348},
+	year={2017},
+	organization={IEEE}
+}
